@@ -5,7 +5,7 @@ Link to the video soon.
 It's actually just a speedup video of me coding.  
 The code is hella crappy, I made it in less than an hours and making this made me cry.  
 please dont hurt me.  
-  # THIS TODO LIST IS WAY BETTER THO! => [Asthriona/ToDo](https://github.com/Asthriona/ToDoList)
+  # THIS TODO LIST IS WAY BETTER THO! => [Asthriona/ToDoList](https://github.com/Asthriona/ToDoList)
 ## You can use it as todo list if youwant. I dont mind.  
 Install:  
 Get a linux server or cloud thinggy who care?  
