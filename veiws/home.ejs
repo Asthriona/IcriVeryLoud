@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Pog Todo!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        header{
+            text-align: center;
+        }
+        .todo li{
+            text-decoration: none;
+            list-style-type: none;
+            color: black !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pog! a todolist!</h1>
+    </header>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 text-center">
+            <div class="form">
+                <div class="inputing-Stuff" style="text-align: center;">
+                    <form action="/post" method="post">
+                        <label for="name">Whatcha need to do naw?</label><br>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" autocomplete="off" name="task" placeholder="Enter a task!" aria-label="add smth to your todolist" aria-describedby="basic-addon2" required>
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="submit">Button</button>
+                            </div>
+                          </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="todo">
+                <h2>You have to do:</h2>
+                <ul>
+                    <!--forEach todo = false-->
+                    <% list.forEach(lists => {
+                        if(lists.done == false){%>
+                            <li><a href="/donezo/<%= lists.task %>" style="color: black;text-decoration: none;" ><%= lists.task %></a></li>
+                        <%}
+                    }); %>
+                </ul>
+            </div>
+            <div class="donezo">
+                <h2>That's done mate!</h2>
+                <ul>
+                    <!--forEach done = true-->
+                    <%list.forEach(lists =>{
+                        if(lists.done == true){%>
+                            <li><a href="/delete/<%= lists.task%>" style="color: black;text-decoration: none;" ><%= lists.task %></a></li>
+                        <%}
+                    })%>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
